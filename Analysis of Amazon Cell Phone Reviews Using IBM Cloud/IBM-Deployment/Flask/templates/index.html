@@ -1,0 +1,74 @@
+<html>
+<title >Amazon Cellphone Sentimental Review Analysis</title>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style/index12.css') }}">
+<style>
+body {
+background: #acb6e5;  /* fallback for old browsers */
+background-image:url("https://www.cnet.com/a/img/_F1Ew1tcyTijvVO0RSggIiL3_zY=/1200x675/2015/07/24/650fb3b1-35b4-4dbd-8058-b17cb434f451/gettyimages-452671942.jpg");
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+</style>
+</head>
+<body  class="body1"> 
+<form  method="POST">
+  <div class="container">
+    <h1 align = 'center' style="color:#cc0066; font-size:80px;width:1400px" >Welcome To Amazon Cellphone
+	Sentimental Review Analysis</h1>
+	
+	<h1 align = 'left' style="color:red; font-size:40px" >Introduction</h1>
+	
+	<p  align = 'center' style="color: #0033cc; font-size:30px; width:1400px; text-align:justify" ><img src="https://mobilemall.pk/public_html/images/product/product_1597226653Xiaomi%20Mi%209%20Se%20Price%20in%20Pakistan.jpg" align = 'right'style="width:200px; hight:100px; border:2px solid gray; margin:5px"class="img-rounded" alt="Gesture">
+	Mobile phones have revolutionized the way we purchase products online, making
+    all the information available at our fingertips. Reviews and ratings submitted 
+    by consumers became an integral part of the customer’s buying decision process. 
+    The review and rating platform provided by eCommerce players creates a transparent 
+    system for consumers to take decisions and feel confident about it. 
+    However, it is difficult to read all the feedback for a particular item 
+    especially for the popular items with many comments. 
+    In this project, we will attempt to understand the factors 
+    that contribute to classifying reviews as positive or negative 
+    We will be using Natural language processing to analyze the 
+    sentiment (positive or a negative) of the given review.</p>
+    <img src="https://ratingscatcher.com/img/blog/081916.jpg" align = 'center'style="width:300px; hight:200px; border:5px solid gray; margin: 0 auto; display: block"class="img-rounded" alt="Gesture">
+    <p align = 'center'style="color:#2db300; font-size:40px; ">Type your Review here</p>
+	
+    <form action='/tpredict' method="post">
+	<p align = "center">
+	<input type="text"  align = "Center" placeholder="Enter the review" name="tweet" id="rcorners1" required>
+	</p>
+	<table align='center' style='padding:1px; border-spacing: 25px; font-size:35 px'>	
+	<tr>
+	<td colspan="2" align="center" ><button class="button5" type="submit" name="predict" align='center' value="Predict" onclick="window.location.href = 'D:\ArtificiaI Intelligence with Flask\Amazon phone review Main\New\templates\index.html'" ><font size="6">Predict</font></button></td>
+	</tr>
+	<tr>
+	<td colspan="2" align = "center" style=" font-size:30px; color:red"><b>{{ypred}}</b></td>
+	</tr>
+	
+	</table>
+	</form>
+     <!--<img src="/static/happy.png" alt="Positive" class="tab3">-->
+	<p>
+	<h1 align = 'right' style="color:#ff3300; font-size:25px" >This Project Is Done By</h1>
+	<h1 align = 'right' style="color:#00394d; font-size:15px" >Rekha Ejjagiri</h1>
+	<h1 align = 'right' style="color:#00663d; font-size:15px" >Rohith Sheripally</h1>
+	<h1 align = 'right' style="color:#003333; font-size:15px" >Sudhagani Ajay Kumar</h1>
+	<h1 align = 'right' style="color:#004466; font-size:15px" >Sudhamalla Vishwa Teja</h1>
+	<h1 align = 'right' style="color:#004d00; font-size:15px" >Yanamala Jagadeshwari</h1>	
+	
+	{% if ypred == "Positive Review" %}
+	<p>Positive</p>
+    {% else %}
+    {% if ypred == "Negative Review" %}
+    
+    {% endif %}
+    {% endif %}
+	
+	</p>
+    
+  </div>
+
+</form>

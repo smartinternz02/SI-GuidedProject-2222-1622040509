@@ -1,0 +1,12 @@
+Keras==2.3.1
+tensorflow==2.5.0
+Flask==1.1.2
+Flask-Cors==3.0.8 
+nltk==3.6.2
+Werkzeug==0.16.0
+pandas==1.2.4
+numpy==1.19.5
+re==2.2.1
+requests
+gevent
+pickle
